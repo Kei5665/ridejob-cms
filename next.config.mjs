@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: '/media',
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/media',
+        permanent: true,
+      },
+      {
+        source: '/:path((?!media/).*)',
+        destination: '/media/:path',
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
