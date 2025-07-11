@@ -123,7 +123,6 @@ export default async function BlogsPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 } 
